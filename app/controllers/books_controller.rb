@@ -18,6 +18,7 @@ class BooksController < ApplicationController
     if @book.save
       redirect_to books_path, notice: "Book was successfully created."
     else
+      flash.now[:alert] = @book.errors.full_messages.join(', ')
       render :new
     end
   end
@@ -34,7 +35,6 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    @book = Book.find(params[:id])
     @book.destroy
     flash[:notice] = "Book was successfully deleted."
     redirect_to books_path 
@@ -47,6 +47,6 @@ class BooksController < ApplicationController
   end
 
   def book_params
-    params.require(:book).permit(:title)
+    params.require(:book).permit(:title, :author, :price, :published_date)
   end
 end

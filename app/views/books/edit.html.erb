@@ -4,7 +4,17 @@
   <%= form.label :title %>
   <%= form.text_field :title %>
 
+  <%= form.label :author %>
+  <%= form.text_field :author %>
+
+  <%= form.label :price %>
+  <%= form.number_field :price, step: 0.01 %>
+
+  <%= form.label :published_date %>
+  <%= form.date_select :published_date %>
+
   <%= form.submit 'Update Book' %>
 <% end %>
 
 <%= link_to 'Back to Home', books_path %>
+
