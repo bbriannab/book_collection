@@ -1,0 +1,23 @@
+<h1>Book Collection</h1>
+
+<%= link_to 'Add Book', new_book_path %>
+
+<% if flash[:notice] %>
+  <p style="color: green;"><%= flash[:notice] %></p>
+<% end %>
+
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      <%= book.title %> |
+      <%= link_to 'Show', book_path(book) %> |
+      <%= link_to 'Edit', edit_book_path(book) %> |
+      <%= button_to 'Delete', 
+          book_path(book), 
+          method: :delete, 
+          form: { data: { turbo_confirm: 'Are you sure you want to delete this book?' }, style: 'display: inline-block'},
+          class: 'delete-button' %>    
+    </li>
+  <% end %>
+</ul>
+
