@@ -1,5 +1,4 @@
 class Book < ApplicationRecord
-<<<<<<< HEAD
     has_many :user_books
     has_many :users, through: :user_books
 
@@ -8,6 +7,3 @@ class Book < ApplicationRecord
 end
   
   
-=======
-end
->>>>>>> a7d1a16c8a5c5666dd329ada4f6756b41bf0480e
