@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>Book Collection</h1>
 
 <%= link_to 'Add Book', new_book_path %>
@@ -21,3 +22,19 @@
   <% end %>
 </ul>
 
+=======
+<p style="color: green"><%= notice %></p>
+
+<h1>Books</h1>
+
+<div id="books">
+  <% @books.each do |book| %>
+    <%= render book %>
+    <p>
+      <%= link_to "Show this book", book %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New book", new_book_path %>
+>>>>>>> a7d1a16c8a5c5666dd329ada4f6756b41bf0480e

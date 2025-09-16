@@ -10,11 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema[7.0].define(version: 2025_09_15_223720) do
+=======
+ActiveRecord::Schema[7.0].define(version: 2025_09_02_193700) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+>>>>>>> a7d1a16c8a5c5666dd329ada4f6756b41bf0480e
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
     t.string "author"
     t.decimal "price"
     t.date "published_date"
@@ -31,6 +39,8 @@ ActiveRecord::Schema[7.0].define(version: 2025_09_15_223720) do
     t.string "username"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+=======
+>>>>>>> a7d1a16c8a5c5666dd329ada4f6756b41bf0480e
   end
 
 end

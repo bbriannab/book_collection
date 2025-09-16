@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>Edit Book</h1>
 
 <%= form_with(model: @book, local: true) do |form| %>
@@ -18,3 +19,15 @@
 
 <%= link_to 'Back to Home', books_path %>
 
+=======
+<h1>Editing book</h1>
+
+<%= render "form", book: @book %>
+
+<br>
+
+<div>
+  <%= link_to "Show this book", @book %> |
+  <%= link_to "Back to books", books_path %>
+</div>
+>>>>>>> a7d1a16c8a5c5666dd329ada4f6756b41bf0480e

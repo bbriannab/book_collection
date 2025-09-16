@@ -9,11 +9,17 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*
+<<<<<<< HEAD
 /log/*.log
 /tmp/*
 !/log/.keep
 !/tmp/.keep
 /tmp
+=======
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+>>>>>>> a7d1a16c8a5c5666dd329ada4f6756b41bf0480e
 
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
@@ -28,3 +34,9 @@
 !/tmp/storage/.keep
 
 /public/assets
+<<<<<<< HEAD
+=======
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+>>>>>>> a7d1a16c8a5c5666dd329ada4f6756b41bf0480e
