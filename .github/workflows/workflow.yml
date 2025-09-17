@@ -7,15 +7,17 @@ env:
 
 name: Rails tests
 on: [push, pull_request]
+
 jobs:
   rspec-test:
     name: RSpec
     runs-on: ubuntu-latest
+    
     services:
       postgres:
         image: postgres:17
         ports:
-        - 5432:5432
+          - 5432:5432
         env:
           POSTGRES_USER: ${{ env.POSTGRES_USER }}
           POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
