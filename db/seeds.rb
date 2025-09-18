@@ -5,10 +5,19 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-Book.create!([
-    { title: 'Harry Potter' },
-    { title: 'The Hunger Games' },
-    { title: 'The Lightning Thief' },
-    { title: 'Twilight' },
-    { title: 'The Mortal Instruments' }
-])
+
+if Rails.env.development?
+  Book.create!(title: "Twilight")
+  Book.create!(title: "The Hunger Games")
+  Book.create!(title: "Ready Player One")
+  Book.create!(title: "Cinder")
+  Book.create!(title: "The Sisters Grimm")
+end
+
+if Rails.env.production?
+  Book.create!(title: "Harry Potter")
+  Book.create!(title: "The Dark Artifices")
+  Book.create!(title: "The Lightning Thief")
+  Book.create!(title: "The Mortal Instruments")
+  Book.create!(title: "The Infernal Devices")
+end
