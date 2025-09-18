@@ -14,6 +14,16 @@ if Rails.env.development?
   Book.create!(title: "The Sisters Grimm")
 end
 
+if Rails.env.test?
+  Book.create!(title: "Sorcerer's Stone")
+  Book.create!(title: "Chamber of Secrets")
+  Book.create!(title: "Prisoner of Azkaban")
+  Book.create!(title: "Goblet of Fire")
+  Book.create!(title: "Order of the Phoenix")
+  Book.create!(title: "Half-Blood Prince")
+  Book.create!(title: "Deathly Hallows")
+end
+
 if Rails.env.production?
   Book.create!(title: "Harry Potter")
   Book.create!(title: "The Dark Artifices")
